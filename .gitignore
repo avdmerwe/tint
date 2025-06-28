@@ -1,0 +1,37 @@
+# Compiled files
+*.o
+tint
+
+# Dependencies
+.depends
+
+# Temporary files
+*~
+*.swp
+*.swo
+*.tmp
+gmon.out
+a.out
+
+# Build stamps
+{configure,build}-stamp
+
+# Debian build artifacts
+debian/tint/
+debian/*.debhelper
+debian/*.debhelper.log
+debian/*.substvars
+debian/files
+debian/.debhelper/
+*.deb
+*.dsc
+*.changes
+*.buildinfo
+*.tar.xz
+*.tar.gz
+
+# Valgrind files
+*.supp
+
+# User score files (should not be in repo)
+.tint.scores

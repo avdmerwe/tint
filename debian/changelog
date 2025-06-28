@@ -1,0 +1,85 @@
+tint (0.03d) jammy; urgency=low
+
+  * Various bug fixes and compiler warnings:
+    - Fixed array bounds warning in io.c by increasing NUM_ATTRS
+    - Replaced deprecated vwprintw with vw_printw
+    - Fixed buffer size for snprintf to prevent truncation
+    - Added error handling for fgets return values
+  * Updated Debian packaging for modern distributions:
+    - Updated debhelper compat level to 13
+    - Updated Standards-Version to 4.6.2
+    - Simplified debian/rules using dh sequencer
+    - Added hardening build flags
+    - Added Rules-Requires-Root: no
+    - Removed elevated privileges in favour of user specific scoring
+    - Fixed distribution name
+    - Changed my email address
+  * Use valgrind to test for memory leaks.
+  * Changed documentation to markdown format.
+  * Changed license from BSD to MIT.
+  * Refactored code to remove utils.* and config.h files.
+  * First github release.
+  
+ -- Abraham van der Merwe <abz@frogfoot.com>  Sat, 28 Jun 2025 13:54:18 +0200
+
+tint (0.03c) unstable; urgency=low
+
+  * Updated debian policies.
+  * Fixed buffer overflow.
+  * Changed score file permissions to allow global writes.
+
+ -- Abraham van der Merwe <abz@frogfoot.com>  Mon, 30 Apr 2012 13:45:10 +0200
+
+tint (0.03b) unstable; urgency=low
+
+  * Added breaks at end of switch statements to keep gcc 3+ happy
+    (Closes: #316022)
+  * Added missing includes to engine.c
+  * Fixed spelling mistake in NOTES
+  * Updated debian policy version
+
+ -- Abraham van der Merwe <abz@frogfoot.com>  Sun, 17 Jul 2005 13:32:17 +0200
+
+tint (0.03a) unstable; urgency=low
+
+  * Applied patch with some minor tweaks from Marcello Mamino which
+    adds a dotted background.
+  * Applied patches from Robert Lemmen which add support for user logins as
+    default name and an interactive mode for specifying the start level.
+  * Show player statistics.
+
+ -- Abraham van der Merwe <abz@frogfoot.com>  Mon, 16 Jun 2003 23:07:37 +0200
+
+tint (0.02d) unstable; urgency=low
+
+  * Install man page in correct directory (Closes: #128923)
+  * Created a postinst program that checks for old score files
+    before installing the default score file (Closes: #136466)
+  * Added a menu control file (Closes: #128924)
+
+ -- Abraham van der Merwe <abz@frogfoot.com>  Wed, 19 Dec 2001 18:03:34 +0200
+
+tint (0.02c) unstable; urgency=low
+
+  * Removed common-sense suggests from control file *g* (Closes: #123204)
+
+ -- Abraham van der Merwe <abz@frogfoot.com>  Wed, 19 Dec 2001 18:03:34 +0200
+
+tint (0.02b) unstable; urgency=low
+
+  * Changed the name from tclassic to tint (as in TINT Is Not Tetris(tm))
+  * Added a build dependancy on libncurses5-dev (Closes: #124241)
+  * Changed the location for the score file to /var/games (Closes: #124236)
+  * Made score file sgid games (Closes: #123595)
+
+ -- Abraham van der Merwe <abz@frogfoot.com>  Wed, 19 Dec 2001 18:03:34 +0200
+
+tclassic (0.02a) unstable; urgency=low
+
+  * Initial Release. (Closes: #122839)
+
+ -- Abraham van der Merwe <abz@frogfoot.com>  Fri,  7 Dec 2001 17:59:25 +0200
+
+Local variables:
+mode: debian-changelog
+End:
